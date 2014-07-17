@@ -9,7 +9,8 @@ angular.module('blogs').controller('BlogsController', ['$scope', '$stateParams',
 		$scope.create = function() {
 			// Create new Blog object
 			var blog = new Blogs ({
-				name: this.name
+				title: this.title,
+                body: this.body
 			});
 
 			// Redirect after save

@@ -10,12 +10,18 @@ var mongoose = require('mongoose'),
  * Blog Schema
  */
 var BlogSchema = new Schema({
-	name: {
+	title: {
 		type: String,
 		default: '',
-		required: 'Please fill Blog name',
+		required: 'Please add a title',
 		trim: true
 	},
+    body: {
+        type: String,
+        default: '',
+        required: 'Please add the body of your article.',
+        trim: true
+    },
 	created: {
 		type: Date,
 		default: Date.now
