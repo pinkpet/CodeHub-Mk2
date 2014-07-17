@@ -48,6 +48,22 @@ var UserSchema = new Schema({
 		validate: [validateLocalStrategyProperty, 'Please fill in your email'],
 		match: [/.+\@.+\..+/, 'Please fill a valid email address']
 	},
+    linkedInUrl: {
+        type: String,
+        trim: true,
+        default: '',
+        required: 'Please add your linkedIn information.'
+    },
+    gitHubUrl: {
+        type: String,
+        trim: true,
+        default: '',
+        required: 'Please add your gitHubUrl information.'
+    },
+/*    photo: {
+        type: Buffer,
+        required: true
+    },*/
 	username: {
 		type: String,
 		unique: true,
